@@ -8,7 +8,7 @@
 import UIKit
 
 class StoreScreenView: UIView {
-    lazy var tableView = MyAppointmentsViewController()
+    lazy var tableView = AppointmentsTableViewController()
     lazy var topImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false

@@ -57,7 +57,7 @@
 		F899ED9A29377CC0005305EE /* ServicesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899ED9929377CC0005305EE /* ServicesMock.swift */; };
 		F899ED9C2937A244005305EE /* AppointmentDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899ED9B2937A244005305EE /* AppointmentDataTableViewCell.swift */; };
 		F899EDA2293E138A005305EE /* StoreTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899EDA1293E138A005305EE /* StoreTopView.swift */; };
-		F899EDA4293E287A005305EE /* AppoitmentsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899EDA3293E287A005305EE /* AppoitmentsScreenViewController.swift */; };
+		F899EDA4293E287A005305EE /* AppointmentsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899EDA3293E287A005305EE /* AppointmentsScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +125,7 @@
 		F899ED9929377CC0005305EE /* ServicesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesMock.swift; sourceTree = "<group>"; };
 		F899ED9B2937A244005305EE /* AppointmentDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDataTableViewCell.swift; sourceTree = "<group>"; };
 		F899EDA1293E138A005305EE /* StoreTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTopView.swift; sourceTree = "<group>"; };
-		F899EDA3293E287A005305EE /* AppoitmentsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentsScreenViewController.swift; sourceTree = "<group>"; };
+		F899EDA3293E287A005305EE /* AppointmentsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,14 +485,30 @@
 		F899ED922934DFC1005305EE /* Client  */ = {
 			isa = PBXGroup;
 			children = (
-				F899ED9529362761005305EE /* MyAppointmentsViewController.swift */,
-				F899ED9729364D36005305EE /* AppointmentsTableViewCell.swift */,
+				F899EDA6293E332D005305EE /* Views */,
+				F899EDA5293E331A005305EE /* Controllers */,
 				F899ED9929377CC0005305EE /* ServicesMock.swift */,
-				F899ED9B2937A244005305EE /* AppointmentDataTableViewCell.swift */,
-				F899EDA1293E138A005305EE /* StoreTopView.swift */,
-				F899EDA3293E287A005305EE /* AppoitmentsScreenViewController.swift */,
 			);
 			path = "Client ";
+			sourceTree = "<group>";
+		};
+		F899EDA5293E331A005305EE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F899ED9529362761005305EE /* MyAppointmentsViewController.swift */,
+				F899ED9729364D36005305EE /* AppointmentsTableViewCell.swift */,
+				F899ED9B2937A244005305EE /* AppointmentDataTableViewCell.swift */,
+				F899EDA3293E287A005305EE /* AppointmentsScreenViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F899EDA6293E332D005305EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F899EDA1293E138A005305EE /* StoreTopView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,7 +651,7 @@
 				DF9FBE002929316D00084694 /* KeychainProtocol.swift in Sources */,
 				DF18BFE8291AF65200C0570A /* EntityFields.swift in Sources */,
 				DF18BFEA291B056400C0570A /* CKStructProtocol.swift in Sources */,
-				F899EDA4293E287A005305EE /* AppoitmentsScreenViewController.swift in Sources */,
+				F899EDA4293E287A005305EE /* AppointmentsScreenViewController.swift in Sources */,
 				DF18BFE3291AE9C400C0570A /* CKAppointment.swift in Sources */,
 				DF18C000291BC9BC00C0570A /* AccountEntity.swift in Sources */,
 				DF18BFDF291AE91500C0570A /* CKCompany.swift in Sources */,

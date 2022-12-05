@@ -7,8 +7,8 @@
 
 import UIKit
 
-class TableHeader: UITableViewHeaderFooterView {
-    static let identifier = "MyAppointmentsViewControllerHeader"
+class AppoitmentsTableViewHeader: UITableViewHeaderFooterView {
+    static let identifier = "AppoitmentsTableViewHeader"
 
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -19,7 +19,7 @@ class TableHeader: UITableViewHeaderFooterView {
     }
 }
 
-class MyAppointmentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AppointmentsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let savedAppointments = services
     var sectionNumber = 0
     let tableView = UITableView()
@@ -30,7 +30,7 @@ class MyAppointmentsViewController: UIViewController, UITableViewDelegate, UITab
         tableViewConfigConstraints()
 
         tableView.register(AppointmentsTableViewCell.self, forCellReuseIdentifier: AppointmentsTableViewCell.identifier)
-        tableView.register(TableHeader.self, forHeaderFooterViewReuseIdentifier: "MyAppointmentsViewControllerHeader")
+        tableView.register(AppoitmentsTableViewHeader.self, forHeaderFooterViewReuseIdentifier: "AppoitmentsTableViewHeader")
         tableView.register(AppointmentDataTableViewCell.self, forCellReuseIdentifier: AppointmentDataTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -70,7 +70,7 @@ class MyAppointmentsViewController: UIViewController, UITableViewDelegate, UITab
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MyAppointmentsViewControllerHeader")
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "AppoitmentsTableViewHeader")
         return header
     }
 

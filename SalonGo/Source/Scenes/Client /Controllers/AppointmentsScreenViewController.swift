@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppoitmentsScreenViewController: UIViewController {
+class AppointmentsScreenViewController: UIViewController {
     var screen: StoreScreenView?
     override func viewDidLoad() {
         super.viewDidLoad()
