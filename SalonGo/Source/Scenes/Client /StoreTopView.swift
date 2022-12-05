@@ -2,15 +2,13 @@
 //  StoreTopView.swift
 //  SalonGo
 //
-//  Created by Milena Maia Araújo on 05/12/22.
+//  Created by Davi Capistrano and edited by Milena Maia Araújo on 05/12/22.
 //
 
 import UIKit
 
 class StoreScreenView: UIView {
     lazy var tableView = MyAppointmentsViewController()
-    
-
     lazy var topImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -134,6 +132,22 @@ class StoreScreenView: UIView {
     private struct Constants {
     static let starsCount: Int = 5
     }
+    
+    var serviceDescriptionLabel: UILabel = {
+        let serviceLabel = UILabel()
+        serviceLabel.translatesAutoresizingMaskIntoConstraints = false
+        serviceLabel.text = "Corte simples"
+        serviceLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        return serviceLabel
+    }()
+    
+    var servicePrice: UILabel = {
+        let servicePrice = UILabel()
+        servicePrice.translatesAutoresizingMaskIntoConstraints = false
+        servicePrice.text = "R$ 80,00"
+        servicePrice.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        return servicePrice
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -145,6 +159,8 @@ class StoreScreenView: UIView {
         self.addSubview(self.timeButton)
         self.addSubview(self.serviceLabel)
         self.addSubview(container)
+        self.addSubview(serviceDescriptionLabel)
+        self.addSubview(servicePrice)
         self.tableView.view.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(tableView.view)
         self.createStars()
@@ -189,7 +205,15 @@ class StoreScreenView: UIView {
             self.serviceLabel.topAnchor.constraint(equalTo: self.timeButton.bottomAnchor, constant: 20),
             self.serviceLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
 
-            self.tableView.view.topAnchor.constraint(equalTo: self.serviceLabel.bottomAnchor, constant: 10)
+
+            self.serviceDescriptionLabel.topAnchor.constraint(equalTo: self.serviceLabel.bottomAnchor, constant: 10),
+            self.serviceDescriptionLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+
+            self.servicePrice.topAnchor.constraint(equalTo: self.serviceDescriptionLabel.bottomAnchor, constant: 5),
+            self.servicePrice.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+
+
+            self.tableView.view.topAnchor.constraint(equalTo: self.servicePrice.bottomAnchor, constant: 10)
 
         ])
     }
