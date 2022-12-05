@@ -23,11 +23,12 @@ class MyAppointmentsViewController: UIViewController, UITableViewDelegate, UITab
     let savedAppointments = services
     var sectionNumber = 0
     let tableView = UITableView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
         view.addSubview(tableView)
         tableViewConfigConstraints()
+
         tableView.register(AppointmentsTableViewCell.self, forCellReuseIdentifier: AppointmentsTableViewCell.identifier)
         tableView.register(TableHeader.self, forHeaderFooterViewReuseIdentifier: "MyAppointmentsViewControllerHeader")
         tableView.register(AppointmentDataTableViewCell.self, forCellReuseIdentifier: AppointmentDataTableViewCell.identifier)
@@ -75,7 +76,7 @@ class MyAppointmentsViewController: UIViewController, UITableViewDelegate, UITab
 
     func tableViewConfigConstraints() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            tableView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 20),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10)])
     }

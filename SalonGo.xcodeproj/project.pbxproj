@@ -56,6 +56,8 @@
 		F899ED9829364D36005305EE /* AppointmentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899ED9729364D36005305EE /* AppointmentsTableViewCell.swift */; };
 		F899ED9A29377CC0005305EE /* ServicesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899ED9929377CC0005305EE /* ServicesMock.swift */; };
 		F899ED9C2937A244005305EE /* AppointmentDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899ED9B2937A244005305EE /* AppointmentDataTableViewCell.swift */; };
+		F899EDA2293E138A005305EE /* StoreTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899EDA1293E138A005305EE /* StoreTopView.swift */; };
+		F899EDA4293E287A005305EE /* AppoitmentsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899EDA3293E287A005305EE /* AppoitmentsScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,8 @@
 		F899ED9729364D36005305EE /* AppointmentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsTableViewCell.swift; sourceTree = "<group>"; };
 		F899ED9929377CC0005305EE /* ServicesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesMock.swift; sourceTree = "<group>"; };
 		F899ED9B2937A244005305EE /* AppointmentDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDataTableViewCell.swift; sourceTree = "<group>"; };
+		F899EDA1293E138A005305EE /* StoreTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTopView.swift; sourceTree = "<group>"; };
+		F899EDA3293E287A005305EE /* AppoitmentsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppoitmentsScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,6 +489,8 @@
 				F899ED9729364D36005305EE /* AppointmentsTableViewCell.swift */,
 				F899ED9929377CC0005305EE /* ServicesMock.swift */,
 				F899ED9B2937A244005305EE /* AppointmentDataTableViewCell.swift */,
+				F899EDA1293E138A005305EE /* StoreTopView.swift */,
+				F899EDA3293E287A005305EE /* AppoitmentsScreenViewController.swift */,
 			);
 			path = "Client ";
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F899EDA2293E138A005305EE /* StoreTopView.swift in Sources */,
 				DF18C006291BCB0A00C0570A /* CompanyEntity.swift in Sources */,
 				DF18BFE5291AEA2E00C0570A /* CKRating.swift in Sources */,
 				DF18BFEC291B091600C0570A /* RemoteClient.swift in Sources */,
@@ -628,6 +635,7 @@
 				DF9FBE002929316D00084694 /* KeychainProtocol.swift in Sources */,
 				DF18BFE8291AF65200C0570A /* EntityFields.swift in Sources */,
 				DF18BFEA291B056400C0570A /* CKStructProtocol.swift in Sources */,
+				F899EDA4293E287A005305EE /* AppoitmentsScreenViewController.swift in Sources */,
 				DF18BFE3291AE9C400C0570A /* CKAppointment.swift in Sources */,
 				DF18C000291BC9BC00C0570A /* AccountEntity.swift in Sources */,
 				DF18BFDF291AE91500C0570A /* CKCompany.swift in Sources */,
