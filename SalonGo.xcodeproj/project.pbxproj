@@ -52,6 +52,10 @@
 		F32CFAC5291933440056E794 /* SalonGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F32CFAC3291933440056E794 /* SalonGo.xcdatamodeld */; };
 		F32CFAC7291933450056E794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F32CFAC6291933450056E794 /* Assets.xcassets */; };
 		F32CFACA291933450056E794 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32CFAC8291933450056E794 /* LaunchScreen.storyboard */; };
+		F899ED9629362761005305EE /* MyAppointmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899ED9529362761005305EE /* MyAppointmentsViewController.swift */; };
+		F899ED9829364D36005305EE /* AppointmentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899ED9729364D36005305EE /* AppointmentsTableViewCell.swift */; };
+		F899ED9A29377CC0005305EE /* ServicesMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899ED9929377CC0005305EE /* ServicesMock.swift */; };
+		F899ED9C2937A244005305EE /* AppointmentDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F899ED9B2937A244005305EE /* AppointmentDataTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,10 @@
 		F32CFAC9291933450056E794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F32CFACB291933450056E794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F32CFAD0291933450056E794 /* SalonGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalonGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F899ED9529362761005305EE /* MyAppointmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppointmentsViewController.swift; sourceTree = "<group>"; };
+		F899ED9729364D36005305EE /* AppointmentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsTableViewCell.swift; sourceTree = "<group>"; };
+		F899ED9929377CC0005305EE /* ServicesMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesMock.swift; sourceTree = "<group>"; };
+		F899ED9B2937A244005305EE /* AppointmentDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDataTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +262,7 @@
 		DF699E7A291AD24100EF7C78 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F899ED912934DFB5005305EE /* Scenes */,
 				DF18BFD7291AE21300C0570A /* Util */,
 				DF9FBE0C292BFE6200084694 /* Entities */,
 				DF699E7E291AD56000EF7C78 /* Client */,
@@ -461,6 +470,25 @@
 			path = SalonGoTests;
 			sourceTree = "<group>";
 		};
+		F899ED912934DFB5005305EE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F899ED922934DFC1005305EE /* Client  */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F899ED922934DFC1005305EE /* Client  */ = {
+			isa = PBXGroup;
+			children = (
+				F899ED9529362761005305EE /* MyAppointmentsViewController.swift */,
+				F899ED9729364D36005305EE /* AppointmentsTableViewCell.swift */,
+				F899ED9929377CC0005305EE /* ServicesMock.swift */,
+				F899ED9B2937A244005305EE /* AppointmentDataTableViewCell.swift */,
+			);
+			path = "Client ";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -591,9 +619,11 @@
 				F32CFABF291933440056E794 /* ViewController.swift in Sources */,
 				DF699E81291AD59200EF7C78 /* CloudKitClient.swift in Sources */,
 				DF9FBE032929362B00084694 /* QueryProtocol.swift in Sources */,
+				F899ED9629362761005305EE /* MyAppointmentsViewController.swift in Sources */,
 				DF9FBE14292C0C6300084694 /* CoreDataStack.swift in Sources */,
 				DF18BFF1291B0BBF00C0570A /* CKContainerHelper.swift in Sources */,
 				DF9FBE0E292BFE7E00084694 /* User.swift in Sources */,
+				F899ED9829364D36005305EE /* AppointmentsTableViewCell.swift in Sources */,
 				DF9FBE17292C161D00084694 /* UserDBManager.swift in Sources */,
 				DF9FBE002929316D00084694 /* KeychainProtocol.swift in Sources */,
 				DF18BFE8291AF65200C0570A /* EntityFields.swift in Sources */,
@@ -612,12 +642,14 @@
 				DF18BFDD291AE87B00C0570A /* CKUser.swift in Sources */,
 				DF9FBDD82929177B00084694 /* KeychainClient.swift in Sources */,
 				DF18BFE1291AE96600C0570A /* CKService.swift in Sources */,
+				F899ED9C2937A244005305EE /* AppointmentDataTableViewCell.swift in Sources */,
 				08E162442934E454000D2105 /* StoreScreen.swift in Sources */,
 				DF9FBE06292936FC00084694 /* QueryManager.swift in Sources */,
 				DF9FBDDA29291F3A00084694 /* SafeStorage.swift in Sources */,
 				DF18BFEE291B0A9300C0570A /* CKContainerProtocol.swift in Sources */,
 				DF18C00A291BCC0300C0570A /* RatingEntity.swift in Sources */,
 				DF18BFDA291AE23100C0570A /* CKEntityProtocol.swift in Sources */,
+				F899ED9A29377CC0005305EE /* ServicesMock.swift in Sources */,
 				DF699E84291AD6C400EF7C78 /* CKAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
