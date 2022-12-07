@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		088546962940BA5F00208B69 /* MyServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088546952940BA5F00208B69 /* MyServiceTableViewController.swift */; };
+		088546992940BC1400208B69 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088546982940BC1400208B69 /* ServiceTableViewCell.swift */; };
+		089880062940CFB900E26A97 /* ServiceDataMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089880052940CFB900E26A97 /* ServiceDataMock.swift */; };
 		08E162442934E454000D2105 /* StoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E162432934E454000D2105 /* StoreScreen.swift */; };
 		08E162462934E47E000D2105 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E162452934E47E000D2105 /* StoreViewController.swift */; };
 		DF18BFDA291AE23100C0570A /* CKEntityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18BFD9291AE23100C0570A /* CKEntityProtocol.swift */; };
@@ -71,6 +74,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		088546952940BA5F00208B69 /* MyServiceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceTableViewController.swift; sourceTree = "<group>"; };
+		088546982940BC1400208B69 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
+		089880052940CFB900E26A97 /* ServiceDataMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDataMock.swift; sourceTree = "<group>"; };
 		08E162432934E454000D2105 /* StoreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreScreen.swift; sourceTree = "<group>"; };
 		08E162452934E47E000D2105 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		DF18BFD9291AE23100C0570A /* CKEntityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKEntityProtocol.swift; sourceTree = "<group>"; };
@@ -146,9 +152,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		088546942940BA1400208B69 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				088546952940BA5F00208B69 /* MyServiceTableViewController.swift */,
+				088546982940BC1400208B69 /* ServiceTableViewCell.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		08E162402934E410000D2105 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				088546942940BA1400208B69 /* Controllers */,
 				08E162422934E438000D2105 /* Screen */,
 				08E162412934E426000D2105 /* ViewController */,
 			);
@@ -167,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				08E162432934E454000D2105 /* StoreScreen.swift */,
+				089880052940CFB900E26A97 /* ServiceDataMock.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -667,6 +684,7 @@
 				DF9FBDD82929177B00084694 /* KeychainClient.swift in Sources */,
 				DF18BFE1291AE96600C0570A /* CKService.swift in Sources */,
 				F899ED9C2937A244005305EE /* AppointmentDataTableViewCell.swift in Sources */,
+				088546962940BA5F00208B69 /* MyServiceTableViewController.swift in Sources */,
 				08E162442934E454000D2105 /* StoreScreen.swift in Sources */,
 				DF9FBE06292936FC00084694 /* QueryManager.swift in Sources */,
 				DF9FBDDA29291F3A00084694 /* SafeStorage.swift in Sources */,
@@ -674,6 +692,8 @@
 				DF18C00A291BCC0300C0570A /* RatingEntity.swift in Sources */,
 				DF18BFDA291AE23100C0570A /* CKEntityProtocol.swift in Sources */,
 				F899ED9A29377CC0005305EE /* ServicesMock.swift in Sources */,
+				089880062940CFB900E26A97 /* ServiceDataMock.swift in Sources */,
+				088546992940BC1400208B69 /* ServiceTableViewCell.swift in Sources */,
 				DF699E84291AD6C400EF7C78 /* CKAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = AppointmentsScreenViewController()
+        window?.rootViewController = StoreViewController()
         window?.makeKeyAndVisible()
     }
 

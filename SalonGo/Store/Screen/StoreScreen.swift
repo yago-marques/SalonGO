@@ -68,6 +68,8 @@ class StoreScreen: UIView {
         return button
     }()
 
+    lazy var tableView = ServiceTableViewController()
+
     // Criado uma variável na qual armazenaremos a classificação atual INT
     private var selectedRate: Int = 0
     // Adicionando um efeito de feedback de seleção ao clicar em uma estrela
@@ -141,6 +143,8 @@ class StoreScreen: UIView {
         self.addSubview(self.timeButton)
         self.addSubview(self.serviceLabel)
         self.addSubview(container)
+        self.tableView.view.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(tableView.view)
         self.createStars()
         self.setupUI()
         self.configConstraints()
@@ -182,8 +186,9 @@ class StoreScreen: UIView {
 
             self.serviceLabel.topAnchor.constraint(equalTo: self.timeButton.bottomAnchor, constant: 20),
             self.serviceLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 150),
-            self.serviceLabel.trailingAnchor.constraint(equalTo:
-                                                            self.safeAreaLayoutGuide.trailingAnchor, constant: -150)
+            self.serviceLabel.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -150),
+
+            self.tableView.view.topAnchor.constraint(equalTo: self.serviceLabel.bottomAnchor, constant: 5)
         ])
     }
 }
