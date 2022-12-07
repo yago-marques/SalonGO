@@ -48,7 +48,7 @@ class AppointmentsTableViewController: UIViewController, UITableViewDelegate, UI
                 return cell
             }
         }
-        
+
         if let cell = tableView.dequeueReusableCell(withIdentifier: AppointmentDataTableViewCell.identifier, for: indexPath) as? AppointmentDataTableViewCell {
             cell.myServices = savedAppointments[indexPath.row]
             return cell
