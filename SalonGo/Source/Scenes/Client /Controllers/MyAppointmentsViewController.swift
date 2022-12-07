@@ -7,8 +7,8 @@
 
 import UIKit
 
-class TableHeader: UITableViewHeaderFooterView {
-    static let identifier = "MyAppointmentsViewControllerHeader"
+class AppoitmentsTableViewHeader: UITableViewHeaderFooterView {
+    static let identifier = "AppoitmentsTableViewHeader"
 
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -19,17 +19,18 @@ class TableHeader: UITableViewHeaderFooterView {
     }
 }
 
-class MyAppointmentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AppointmentsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let savedAppointments = services
     var sectionNumber = 0
     let tableView = UITableView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
         view.addSubview(tableView)
         tableViewConfigConstraints()
+
         tableView.register(AppointmentsTableViewCell.self, forCellReuseIdentifier: AppointmentsTableViewCell.identifier)
-        tableView.register(TableHeader.self, forHeaderFooterViewReuseIdentifier: "MyAppointmentsViewControllerHeader")
+        tableView.register(AppoitmentsTableViewHeader.self, forHeaderFooterViewReuseIdentifier: "AppoitmentsTableViewHeader")
         tableView.register(AppointmentDataTableViewCell.self, forCellReuseIdentifier: AppointmentDataTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -47,7 +48,7 @@ class MyAppointmentsViewController: UIViewController, UITableViewDelegate, UITab
                 return cell
             }
         }
-        
+
         if let cell = tableView.dequeueReusableCell(withIdentifier: AppointmentDataTableViewCell.identifier, for: indexPath) as? AppointmentDataTableViewCell {
             cell.myServices = savedAppointments[indexPath.row]
             return cell
@@ -69,13 +70,13 @@ class MyAppointmentsViewController: UIViewController, UITableViewDelegate, UITab
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MyAppointmentsViewControllerHeader")
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "AppoitmentsTableViewHeader")
         return header
     }
 
     func tableViewConfigConstraints() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            tableView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 20),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10)])
     }
