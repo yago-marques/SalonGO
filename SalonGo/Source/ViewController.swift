@@ -14,11 +14,11 @@ class ViewController: UITabBarController {
         view.backgroundColor = .systemBackground
         setupVCs()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-    
+
     private func configureNavigationbarItems() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "plus"),
@@ -34,22 +34,39 @@ class ViewController: UITabBarController {
         )
     }
 
-fileprivate func createNavController(for rootViewController: UIViewController, title: String, image: UIImage) -> UIViewController {
+    fileprivate func createNavController(
+        for rootViewController: UIViewController,
+        title: String,
+        image: UIImage
+    ) -> UIViewController {
           let navController = UINavigationController(rootViewController: rootViewController)
           navController.tabBarItem.title = title
           navController.tabBarItem.image = image
           navController.navigationBar.prefersLargeTitles = true
           rootViewController.navigationItem.title = title
           return navController
-      }
+    }
 
-func setupVCs() {
-          viewControllers = [
-            createNavController(for: UIViewController(), title: NSLocalizedString("Home", comment: ""), image: UIImage(systemName: "house")!),
-            createNavController(for: UIViewController(), title: NSLocalizedString("Appointments", comment: ""), image: UIImage(systemName: "calendar")!),
-            createNavController(for: UIViewController(), title: NSLocalizedString("Profile", comment: ""), image: UIImage(systemName: "person")!)
-          ]
-      }
+    func setupVCs() {
+        viewControllers = [
+            createNavController(
+                for: UIViewController(),
+                title: NSLocalizedString("Home", comment: ""),
+                image: UIImage(systemName: "house")!
+            ),
+            createNavController(
+                for: UIViewController(),
+                title: NSLocalizedString("Appointments", comment: ""),
+                image: UIImage(systemName: "calendar")!
+            ),
+            createNavController(
+                for: UIViewController(),
+                title: NSLocalizedString("Profile", comment: ""),
+                image: UIImage(systemName: "person")!
+            )
+        ]
+    }
+
 }
 
 class StoreViewController: UIViewController {
@@ -58,6 +75,7 @@ class StoreViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
     }
+
 }
 
 class AccountViewController: UIViewController {
@@ -66,4 +84,5 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .blue
     }
+
 }
