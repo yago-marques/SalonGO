@@ -140,13 +140,22 @@ class StoreScreenView: UIView {
         serviceLabel.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         return serviceLabel
     }()
-    
+
     var servicePrice: UILabel = {
         let servicePrice = UILabel()
         servicePrice.translatesAutoresizingMaskIntoConstraints = false
         servicePrice.text = "R$ 80,00"
         servicePrice.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
         return servicePrice
+    }()
+    
+    var makeAppoitmentButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Agendar", for: .normal)
+        button.backgroundColor = UIColor(named: "redGrayColor")
+        button.layer.cornerRadius = 10
+        return button
     }()
 
     override init(frame: CGRect) {
@@ -163,6 +172,7 @@ class StoreScreenView: UIView {
         self.addSubview(servicePrice)
         self.tableView.view.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(tableView.view)
+        self.addSubview(makeAppoitmentButton)
         self.createStars()
         self.setupUI()
         self.configConstraints()
@@ -178,10 +188,14 @@ class StoreScreenView: UIView {
             self.topImage.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             self.topImage.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.topImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.topImage.heightAnchor.constraint(equalToConstant: 120),
 
-            self.nameCompanyLabel.topAnchor.constraint(equalTo: self.topImage.bottomAnchor, constant: 10),
-            self.nameCompanyLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            self.nameCompanyLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            self.nameCompanyLabel.topAnchor.constraint(
+                equalTo: self.topImage.bottomAnchor, constant: 10),
+            self.nameCompanyLabel.leadingAnchor.constraint(
+                equalTo: self.leadingAnchor, constant: 8),
+            self.nameCompanyLabel.trailingAnchor.constraint(
+                equalTo: self.trailingAnchor),
 
             self.addressLabel.topAnchor.constraint(equalTo: self.nameCompanyLabel.bottomAnchor, constant: 5),
             self.addressLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
@@ -212,8 +226,17 @@ class StoreScreenView: UIView {
             self.servicePrice.topAnchor.constraint(equalTo: self.serviceDescriptionLabel.bottomAnchor, constant: 5),
             self.servicePrice.centerXAnchor.constraint(equalTo: self.centerXAnchor),
 
-
-            self.tableView.view.topAnchor.constraint(equalTo: self.servicePrice.bottomAnchor, constant: 10)
+            self.tableView.view.topAnchor.constraint(equalTo: self.servicePrice.bottomAnchor, constant: 10),
+            self.tableView.view.leadingAnchor.constraint(
+                equalTo: self.leadingAnchor),
+            self.tableView.view.trailingAnchor.constraint(
+                equalTo: self.trailingAnchor),
+            self.tableView.view.bottomAnchor.constraint(equalTo: makeAppoitmentButton.topAnchor),
+//            self.makeAppoitmentButton.topAnchor.constraint(equalTo: self.tableView.view.bottomAnchor, constant: 60),
+            self.makeAppoitmentButton.heightAnchor.constraint(equalToConstant: 50),
+            self.makeAppoitmentButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            self.makeAppoitmentButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 135),
+            self.makeAppoitmentButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -135)
 
         ])
     }

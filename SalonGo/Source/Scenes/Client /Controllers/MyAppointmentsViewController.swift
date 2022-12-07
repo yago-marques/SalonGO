@@ -28,13 +28,15 @@ class AppointmentsTableViewController: UIViewController, UITableViewDelegate, UI
         super.viewDidLoad()
         view.addSubview(tableView)
         tableViewConfigConstraints()
+        
+    
 
         tableView.register(AppointmentsTableViewCell.self, forCellReuseIdentifier: AppointmentsTableViewCell.identifier)
         tableView.register(AppoitmentsTableViewHeader.self, forHeaderFooterViewReuseIdentifier: "AppoitmentsTableViewHeader")
         tableView.register(AppointmentDataTableViewCell.self, forCellReuseIdentifier: AppointmentDataTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.frame = view.bounds
+//        tableView.frame = view.bounds
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,7 +44,7 @@ class AppointmentsTableViewController: UIViewController, UITableViewDelegate, UI
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if sectionNumber == 0 {
+        if indexPath.section == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: AppointmentsTableViewCell.identifier, for: indexPath) as? AppointmentsTableViewCell {
                 cell.myServices = savedAppointments[indexPath.row]
                 return cell
@@ -75,8 +77,10 @@ class AppointmentsTableViewController: UIViewController, UITableViewDelegate, UI
     }
 
     func tableViewConfigConstraints() {
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 20),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10)])
     }
