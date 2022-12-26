@@ -13,7 +13,6 @@ protocol OnboardingViewDelegate: AnyObject {
     func setup(buttonTitle: String)
     func getPage() -> Int
     func displayScreen(at index: Int)
-    func isPossibleNext(_ newState: Bool)
     func showPrevButton()
     func hidePrevButton()
 }
@@ -117,12 +116,10 @@ extension OnboardingView: OnboardingViewDelegate {
     }
 
     func displayScreen(at index: Int) {
-        pageControl.currentPage = index
-        navigateToCorrectScreen(at: index)
-    }
-
-    func isPossibleNext(_ newState: Bool) {
-        self.isPossibleToNext = newState
+        if index <= 2, index >= 0 {
+            pageControl.currentPage = index
+            navigateToCorrectScreen(at: index)
+        }
     }
 
     func showPrevButton() {

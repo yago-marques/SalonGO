@@ -12,7 +12,6 @@ protocol OnboardingControllerDelegate: AnyObject {
     func setup(buttonTitle: String)
     func getPage() -> Int
     func displayScreen(at index: Int)
-    func isPossibleNext(_ newState: Bool)
     func showPrevButton()
     func hidePrevButton()
 }
@@ -53,18 +52,6 @@ private extension OnboardingController {
         self.presenter.controller = self
         self.presenter.router.navigation = self.navigationController
     }
-
-    func deleteUser() {
-        let coredata = CoreDataClient()
-        let keychain = KeychainClient()
-
-        do {
-            try coredata.deleteUser()
-            try keychain.delete()
-        } catch {
-            print(error)
-        }
-    }
 }
 
 extension OnboardingController: OnboardingControlling {
@@ -92,10 +79,6 @@ extension OnboardingController: OnboardingControllerDelegate {
 
     func displayScreen(at index: Int) {
         viewDelegate?.displayScreen(at: index)
-    }
-
-    func isPossibleNext(_ newState: Bool) {
-        viewDelegate?.isPossibleNext(newState)
     }
 
     func showPrevButton() {

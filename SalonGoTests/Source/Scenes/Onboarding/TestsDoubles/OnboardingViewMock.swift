@@ -14,7 +14,6 @@ final class OnboardingViewMock: OnboardingViewDelegate {
         case getPage(Int)
         case setup(buttonTitle: String)
         case displayScreen(index: Int)
-        case isPossibleNext(Bool)
     }
 
     private var currentyPage = 0
@@ -37,11 +36,7 @@ final class OnboardingViewMock: OnboardingViewDelegate {
 
     func displayScreen(at index: Int) {
         receivedMessages.append(.displayScreen(index: index))
-        self.currentyPage = index
-    }
-
-    func isPossibleNext(_ newState: Bool) {
-        receivedMessages.append(.isPossibleNext(newState))
+        self.currentyPage = index + 1
     }
 
     func showPrevButton() {

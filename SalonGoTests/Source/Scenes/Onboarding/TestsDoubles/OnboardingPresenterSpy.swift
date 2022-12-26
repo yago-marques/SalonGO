@@ -12,6 +12,7 @@ final class OnboardingPresenterSpy: OnboardingPresenting {
     enum Message: Equatable {
         case showOnboardingIfNeeded
         case verifyCapturedAction(direction: OnboardingDirection)
+        case getCellViewModel(row: Int)
     }
 
     var router: OnboardingRouting
@@ -30,6 +31,12 @@ final class OnboardingPresenterSpy: OnboardingPresenting {
 
     func verifyCapturedAction(direction: OnboardingDirection) {
         receivedMessages.append(.verifyCapturedAction(direction: direction))
+    }
+
+    func getCellViewModel(row: Int) -> OnboardingViewModel {
+        receivedMessages.append(.getCellViewModel(row: row))
+
+        return .init(animation: "", title: "", subtitle: "")
     }
 
 }
